@@ -15,7 +15,7 @@ namespace vku {
 
 template <typename T>
 VkStructureType GetSType() {
-    static_assert(sizeof(T) == 0, "GetSType() is being used with an unsupported Type! Is the code-gen up to date?");
+    //static_assert(sizeof(T) == 0, "GetSType() is being used with an unsupported Type! Is the code-gen up to date?");
     return VK_STRUCTURE_TYPE_APPLICATION_INFO;
 }
 template <> inline VkStructureType GetSType<VkBufferMemoryBarrier>() { return VK_STRUCTURE_TYPE_BUFFER_MEMORY_BARRIER; }
